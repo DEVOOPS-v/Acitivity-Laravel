@@ -9,6 +9,6 @@ class DepartmentsSeeder extends Seeder
 {
     public function run(): void
     {
-        Departments::factory(10)->create();
+        Departments::factory(30)->create();
     }
 }

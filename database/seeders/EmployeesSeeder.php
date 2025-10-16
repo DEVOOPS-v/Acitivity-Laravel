@@ -21,6 +21,6 @@ class EmployeesSeeder extends Seeder
         }
 
         // Now seed employees
-        Employees::factory(20)->create();
+        Employees::factory(30)->create();
     }
 }
