@@ -7,21 +7,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Employees extends Model
 {
-    /** @use HasFactory<\Database\Factories\EmployeesFactory> */
     use HasFactory;
 
     protected $fillable = [
         'first_name',
         'last_name',
         'email', 
-        'salary'
+        'salary',
+        'department_id',
+        'position_id'
     ];
 
-    public function departments() {
+    // Each employee belongs to one department
+    public function department() {
         return $this->belongsTo(Departments::class);
     }
 
-    public function positions() {
+    // Each employee belongs to one position
+    public function position() {
         return $this->belongsTo(Positions::class);
     }
 }
